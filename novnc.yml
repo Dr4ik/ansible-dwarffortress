@@ -6,5 +6,5 @@
 
   tasks:
     - name: start application
-      sudo: yes
+      become: yes
       supervisorctl: name=novnc state=restarted

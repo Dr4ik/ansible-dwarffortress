@@ -1,6 +1,6 @@
 ---
 - name: Install gitwatch dependancies
-  sudo: yes
+  become: yes
   apt: pkg={{ item }}
        state=latest
        update_cache=yes
@@ -18,7 +18,7 @@
     - install
 
 - name: Add gitwatch wrapper script
-  sudo: yes
+  become: yes
   template: src=setup-gitwatch.j2
             dest=/setup-gitwatch.sh
             mode=0755

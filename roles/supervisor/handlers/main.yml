@@ -1,12 +1,12 @@
 ---
 - name: Restart supervisor
-  sudo: yes
+  become: yes
   service: name=supervisor state=restarted
 
 - name: Reread supervisor
-  sudo: yes
+  become: yes
   command: supervisorctl reread
 
 - name: Update supervisord
-  sudo: yes
+  become: yes
   command: supervisorctl update

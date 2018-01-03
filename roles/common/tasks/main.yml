@@ -3,7 +3,7 @@
   command: dpkg --add-architecture i386
 
 - name: Install df dependancies
-  sudo: yes
+  become: yes
   apt: pkg={{ item }}
        state=latest
        update_cache=yes
@@ -24,12 +24,12 @@
 
 - name: Ensure df group exist
   group: name=df gid=14503 state=present
-  sudo: yes
+  become: yes
   tags:
   - install
 
 - name: Ensure df user exist
   user: name=df uid=14503 group=df state=present
-  sudo: yes
+  become: yes
   tags:
   - install

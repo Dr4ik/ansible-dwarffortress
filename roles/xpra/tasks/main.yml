@@ -1,11 +1,11 @@
 ---
 - name: Add winswitch apt key
-  sudo: yes
+  become: yes
   apt_key: url=http://winswitch.org/gpg.asc state=present
   tags: install
 
 - name: Add winswitch apt repo
-  sudo: yes
+  become: yes
   apt_repository: repo='deb http://winswitch.org/ trusty main'
                   state=present
   tags: install
@@ -18,7 +18,7 @@
     - install
 
 - name: Install XPRA
-  sudo: yes
+  become: yes
   apt: pkg={{ item }}
        state=latest
        update_cache=yes
@@ -31,7 +31,7 @@
   tags: install
 
 - name: Set password on df user
-  sudo: yes
+  become: yes
   shell: echo 'df:changeme' |chpasswd
   tags: install
 

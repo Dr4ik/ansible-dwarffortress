@@ -1,6 +1,6 @@
 ---
 - name: Install stonesense dependancies
-  sudo: yes
+  become: yes
   apt: pkg={{ item }}
        state=latest
        update_cache=yes

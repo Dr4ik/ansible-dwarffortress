@@ -1,6 +1,6 @@
 ---
 - name: Add supervisor config
-  sudo: yes
+  become: yes
   template: src=supervisor.j2 dest=/etc/supervisor/conf.d/gitwatch.conf
   notify: Restart supervisor
   tags:
