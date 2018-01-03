@@ -11,7 +11,7 @@
   tags: install
 
 - name: Fetch DFHack
-  get_url: url=https://github.com/DFHack/dfhack/releases/download/0.43.03-r1/dfhack-0.43.03-r1-Linux-gcc-4.8.1.tar.bz2
+  get_url: url=https://github.com/DFHack/dfhack/releases/download/0.44.03-beta1/dfhack-0.44.03-beta1-Linux-64-gcc-5.4.0.tar.bz2
            dest=/dfhack.tar.bz2
   tags: install
 
