@@ -6,8 +6,8 @@
        update_cache=yes
        cache_valid_time=3600
   with_items:
-    - libjpeg62:i386
-    - libsm6:i386
+    - libjpeg62
+    - libsm6
   tags: install
 
 - name: Fetch DFHack
